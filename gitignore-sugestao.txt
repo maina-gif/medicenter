@@ -1,0 +1,12 @@
+# Senhas e configuração local
+src/main/resources/application.properties
+.env
+
+# Build e dependências
+target/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.idea/
+*.iml

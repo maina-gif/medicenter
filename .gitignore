@@ -1,0 +1,17 @@
+# Configuração local e credenciais
+src/main/resources/application.properties
+.env
+
+# Build Java/Maven
+target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log

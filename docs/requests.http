@@ -1,0 +1,49 @@
+### Especialidade
+POST http://localhost:8080/api/especialidades
+Content-Type: application/json
+
+{ "nome": "Cardiologia", "descricao": "Coração e sistema circulatório" }
+
+### Paciente
+POST http://localhost:8080/api/pacientes
+Content-Type: application/json
+
+{ "nomeCompleto": "Maria Souza", "cpf": "123.456.789-00", "dataNascimento": "1990-05-20",
+  "telefone": "(11) 99999-0000", "email": "maria@email.com" }
+
+### Medico (use o id da especialidade criada acima)
+POST http://localhost:8080/api/medicos
+Content-Type: application/json
+
+{ "nomeCompleto": "Dr. João Lima", "crm": "CRM-SP 123456", "especialidadeId": 1,
+  "telefone": "(11) 98888-0000", "email": "joao@medicenter.com" }
+
+### Consulta
+POST http://localhost:8080/api/consultas
+Content-Type: application/json
+
+{ "pacienteId": 1, "medicoId": 1,
+  "dataHoraInicio": "2026-10-20T14:00:00", "dataHoraFim": "2026-10-20T14:30:00",
+  "motivo": "Check-up" }
+
+### Sobreposição de horário: deve dar 409
+POST http://localhost:8080/api/consultas
+Content-Type: application/json
+
+{ "pacienteId": 1, "medicoId": 1,
+  "dataHoraInicio": "2026-10-20T14:15:00", "dataHoraFim": "2026-10-20T14:45:00" }
+
+### Cancelar consulta
+PATCH http://localhost:8080/api/consultas/1/status
+Content-Type: application/json
+
+{ "status": "CANCELADA" }
+
+### Listagens
+GET http://localhost:8080/api/pacientes
+
+###
+GET http://localhost:8080/api/medicos
+
+###
+GET http://localhost:8080/api/consultas
