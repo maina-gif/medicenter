@@ -2,7 +2,6 @@
 
 Sistema acadêmico de gerenciamento de clínica médica.
 
-> **Status:** versão parcial da API. Este repositório contém controllers, services, DTOs, tratamento de erros, CORS, documentação e exemplos de requisições. O `pom.xml`, as entidades, os repositories e o frontend serão adicionados quando o projeto completo for integrado a partir da outra máquina.
 
 ## Escopo do projeto
 
